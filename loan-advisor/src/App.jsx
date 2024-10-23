@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header.jsx';
 import HomeBody from './components/HomeBody.jsx';
 import Loans from './components/Loans.jsx'; // Import the Loans component
-import CreditCard from './components/CreditCard.jsx'; // Import the CreditCard component
+import CreditCard from './components/Creditcard.jsx'; // Import the CreditCard component
+
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
                 <Route path="/credit-card" element={<CreditCard />} /> {/* Route for Credit Card */}
                 <Route path="/" element={<HomeBody />} /> {/* Default route */}
                 {/* Add more routes as needed */}
-            </Routes> 
+            </Routes>
         </Router>
     );
 }

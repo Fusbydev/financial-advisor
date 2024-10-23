@@ -6,7 +6,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.companyDex {
+    color: white;
+}
 .overlay {
     border-image: fill 1 linear-gradient(#0003,#000000); /* your gradient here */
 }

@@ -36,9 +36,9 @@ function Header() {
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
                                 <NavLink 
-                                    className="nav-link" 
+                                    className="nav-link active" 
                                     to="/" 
-                                    activeClassName="active"
+                                    
                                     style={({ isActive }) => ({ color: isActive ? 'red' : 'inherit' })}
                                 >
                                     Home
@@ -46,9 +46,9 @@ function Header() {
                             </li>
                             <li className="nav-item">
                                 <NavLink 
-                                    className="nav-link" 
+                                    className="nav-link active" 
                                     to="/loans" 
-                                    activeClassName="active"
+                                    
                                     style={({ isActive }) => ({ color: isActive ? 'red' : 'inherit' })}
                                 >
                                     Loans
@@ -56,9 +56,9 @@ function Header() {
                             </li>
                             <li className="nav-item">
                                 <NavLink 
-                                    className="nav-link" 
+                                    className="nav-link active" 
                                     to="/credit-card" 
-                                    activeClassName="active"
+                                    
                                     style={({ isActive }) => ({ color: isActive ? 'red' : 'inherit' })}
                                 >
                                     Credit Card
