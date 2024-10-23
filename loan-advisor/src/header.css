@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+.sign-up, .login {
+    border: none;                 /* Remove default button border */
+    padding: 15px 30px;           /* Button padding for size */
+    font-size: 16px;              /* Font size */
+    cursor: pointer;              /* Change cursor to pointer on hover */
+    transform: skew(-20deg);      /* Skew to create the parallelogram shape */
+    outline: none;                /* Remove focus outline */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-left: 5px;
+}
+button span {
+    display: inline-block;
+    transform: skew(20deg);       /* Unskew the text inside the button */
+    font-family: 'oswald';
+    letter-spacing: 2px;
+}
+.sign-up {
+    background-color: hsl(0, 100%, 56%);
+    color: #f3f3f3;
+}
+.login {
+    background-color: white;
+    border: solid 1px hsl(0, 100%, 56%);
+    color: #404040;
+}
+.navbar-brand, .offcanvas-title {
+    font-family: 'oswald';
+    font-size: 40px;
+}
+.nav-link {
+    font-family: 'oswald';
+    font-size: 25px;
+}
+
+.offcanvas {
+    position: fixed; /* Ensure the offcanvas stays on top and does not affect body content */
+    z-index: 1050;   /* Keep the offcanvas above all other elements */
+    top: 0;
+    bottom: 0;
+}
+

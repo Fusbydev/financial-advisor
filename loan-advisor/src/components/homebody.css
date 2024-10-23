@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+.bg {
+    height: 100vh;
+    background-image: url('src/assets/bg-datawave.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    border-image: fill 1 linear-gradient(#0003,#000000); /* your gradient here */
+}
+.cont h1, p {
+    color: #f3f3f3;
+    font-family: 'oswald';
+}
+.cont h1 {
+    font-size: 100px;
+}
+.cont p {
+    font-size: 20px;
+}
+.mentor-button {
+    border: none;                 /* Remove default button border */
+    padding: 15px 30px;           /* Button padding for size */
+    font-size: 16px;              /* Font size */
+    cursor: pointer;              /* Change cursor to pointer on hover */
+    transform: skew(20deg);      /* Skew to create the parallelogram shape */
+    outline: none;                /* Remove focus outline */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-left: 5px;
+    color: #f3f3f3;
+    background-color: hsl(0, 100%, 56%);
+}
+.mentor-button span {
+    transform: skew(-20deg);
+    font-family: 'oswald';
+}
+
+/* Base styles */
+.cont h1 {
+    font-size: 100px;
+}
+
+.cont p {
+    font-size: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .cont h1 {
+        font-size: 80px;
+    }
+
+    .cont p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cont h1 {
+        font-size: 60px;
+    }
+
+    .cont p {
+        font-size: 16px;
+    }
+    .bg {
+        background-position: center;
+        background-size: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .cont h1 {
+        font-size: 50px;
+    }
+
+    .cont p {
+        font-size: 14px;
+    }
+
+    .mentor-button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    .bg {
+        background-position: center;
+        background-size: auto;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .cont h1 {
+        font-size: 40px;
+    }
+
+    .cont p {
+        font-size: 12px;
+    }
+
+    .mentor-button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    .bg {
+        background-position: center;
+        background-size: auto;
+    }
+}
