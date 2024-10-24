@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom'; // useNavigate instead of Navigate
 import './header.css';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate(); // Initialize the useNavigate hook
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    const handleRedirect = () => {
+        navigate('/login'); // Use navigate function to redirect
     };
 
     return (
@@ -38,7 +43,6 @@ function Header() {
                                 <NavLink 
                                     className="nav-link active" 
                                     to="/" 
-                                    
                                     style={({ isActive }) => ({ color: isActive ? 'red' : 'inherit' })}
                                 >
                                     Home
@@ -48,7 +52,6 @@ function Header() {
                                 <NavLink 
                                     className="nav-link active" 
                                     to="/loans" 
-                                    
                                     style={({ isActive }) => ({ color: isActive ? 'red' : 'inherit' })}
                                 >
                                     Loans
@@ -58,7 +61,6 @@ function Header() {
                                 <NavLink 
                                     className="nav-link active" 
                                     to="/credit-card" 
-                                    
                                     style={({ isActive }) => ({ color: isActive ? 'red' : 'inherit' })}
                                 >
                                     Credit Card
@@ -66,8 +68,8 @@ function Header() {
                             </li>
                         </ul>
                         <div className="d-flex">
-                            <button className="me-2 sign-up"><span>Sign Up</span></button>
-                            <button className="login me-2"><span>Login</span></button>
+                            <button className="me-2 sign-up" onClick={handleRedirect}><span>Sign Up</span></button>
+                            <button className="login me-2" onClick={handleRedirect}><span>Login</span></button>
                         </div>
                     </div>
                 </div>
