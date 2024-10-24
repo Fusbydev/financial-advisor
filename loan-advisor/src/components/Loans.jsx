@@ -21,19 +21,23 @@ function Loans() {
             {
                 name: 'Credit Line',
                 description: 'Ideal for recurring business expenses such as inventory, employee salaries, utilities, equipment maintenance, and delivery costs',
-                image: 'https://placehold.co/500x300',
+                image: 'https://placehold.co/500x300.',
             },
             {
-                name: 'Personal Loan',
-                description: 'Great for personal expenses like home improvement, vacations, and more.',
+                name: 'SME Loan',
+                description: 'Supports the business in expanding product lines, purchasing new equipment, or meeting other capital expenditures.',
                 image: 'https://placehold.co/500x300/FFCC00/FFFFFF',
             },
             {
-                name: 'Business Loan',
-                description: 'Perfect for funding new projects or expanding your business operations.',
+                name: 'Negosyo Ready Loan',
+                description: 'Ideal for businesses with seasonal funding needs',
                 image: 'https://placehold.co/500x300/FF6600/FFFFFF',
             },
-            // Add more loan types if necessary
+            {
+                name: 'Negosyo Ready Ka-Negosyo SME Loan for Property Acquisition',
+                description: 'Ideal for acquisition or construction of property assets for your business.',
+                image: 'https://placehold.co/500x300/FF6600/FFFFFF',
+            },
         ];
     };
 

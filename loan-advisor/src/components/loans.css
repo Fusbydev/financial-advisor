@@ -8,3 +8,6 @@ p {
     color: black;
     font-size: 25px;
 }
+img {
+    border-radius: 20px;
+}
