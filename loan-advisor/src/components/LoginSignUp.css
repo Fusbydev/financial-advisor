@@ -14,12 +14,12 @@ padding: 0;
 p span {
     color: blue;
 }
-h2 {
+.form h2 {
     color: red;
     font-family: 'oswald';
 }
 
-p {
+.loginOrRegister p {
     font-size: 15px;
 }
 
