@@ -1,10 +1,16 @@
-import Chatbox from "./Chatbox"
+import Chatbox from "./Chatbox";
+import Footer from "../Footer";
+import './mentorpage.css';
+
 function Mentor() {
-    return(
-        <div className="d-flex justify-content-center align-items-center vh-100 py-2">
-            <Chatbox></Chatbox>
+    return (
+        <div className="d-flex flex-column vh-100 mentor-container">
+            <div className="flex-grow-1 d-flex justify-content-center align-items-center mt-5">
+                <Chatbox />
+            </div>
+            <Footer />
         </div>
-    )
+    );
 }
 
-export default Mentor
+export default Mentor;

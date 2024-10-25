@@ -1,6 +1,7 @@
 // src/components/Loans.jsx
 import React, { useEffect, useState } from 'react';
 import './loans.css';
+import Footer from "../Footer";
 
 function Loans() {
     const [loanData, setLoanData] = useState([]);
@@ -16,12 +17,11 @@ function Loans() {
     }, []);
 
     const fetchLoanTypes = () => {
-        // Sample loan types array
         return [
             {
                 name: 'Credit Line',
                 description: 'Ideal for recurring business expenses such as inventory, employee salaries, utilities, equipment maintenance, and delivery costs',
-                image: 'https://placehold.co/500x300.',
+                image: 'https://placehold.co/500x300',
             },
             {
                 name: 'SME Loan',
@@ -41,46 +41,45 @@ function Loans() {
         ];
     };
 
-    console.log("Loan data state:", loanData); // Debugging to check if data is set
-
     return (
-        <div className="" style={{ height: '100vh' }}>
-            <div className="container mx-auto text-start" style={{ height: 'auto', marginTop: '100px' }}>
-                <h1 className="">Different Types of Loans</h1>
-                <p className="">Find one that suits your needs</p>
-            </div>
+        <div className="d-flex flex-column min-vh-100">
+            <div className="container mx-auto text-start flex-grow-1" style={{ marginTop: '100px' }}>
+                <h1>Different Types of Loans</h1>
+                <p>Find one that suits your needs</p>
 
-            <div className="container pb-3" style={{ height: 'auto' }}>
-                {loanData.length > 0 ? (
-                    loanData.map((loan, index) => (
-                        <div className="row" key={index}>
-                            {index % 2 === 0 ? (
-                                <>
-                                    <div className="col-md-6 col-lg-6 col-sm-6">
-                                        <h1>{loan.name}</h1>
-                                        <p>{loan.description}</p>
-                                    </div>
-                                    <div className="col-md-6 col-lg-6 col-sm-6">
-                                        <img src={loan.image} alt={loan.name} style={{ width: '100%', height: 'auto' }} />
-                                    </div>
-                                </>
-                            ) : (
-                                <>
-                                    <div className="col-md-6 col-lg-6 col-sm-6">
-                                        <img src={loan.image} alt={loan.name} style={{ width: '100%', height: 'auto' }} />
-                                    </div>
-                                    <div className="col-md-6 col-lg-6 col-sm-6">
-                                        <h1>{loan.name}</h1>
-                                        <p>{loan.description}</p>
-                                    </div>
-                                </>
-                            )}
-                        </div>
-                    ))
-                ) : (
-                    <p>No loan data available</p>
-                )}
+                <div className="container pb-3">
+                    {loanData.length > 0 ? (
+                        loanData.map((loan, index) => (
+                            <div className="row mb-4" key={index}>
+                                {index % 2 === 0 ? (
+                                    <>
+                                        <div className="col-md-6">
+                                            <h2>{loan.name}</h2>
+                                            <p>{loan.description}</p>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <img src={loan.image} alt={loan.name} style={{ width: '100%', height: 'auto' }} />
+                                        </div>
+                                    </>
+                                ) : (
+                                    <>
+                                        <div className="col-md-6">
+                                            <img src={loan.image} alt={loan.name} style={{ width: '100%', height: 'auto' }} />
+                                        </div>
+                                        <div className="col-md-6">
+                                            <h2>{loan.name}</h2>
+                                            <p>{loan.description}</p>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+                        ))
+                    ) : (
+                        <p>No loan data available</p>
+                    )}
+                </div>
             </div>
+            <Footer />
         </div>
     );
 }

@@ -1,0 +1,8 @@
+/* Full-height container with flex layout */
+.mentor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes Footer to the bottom */
+    min-height: 100vh;
+}
+

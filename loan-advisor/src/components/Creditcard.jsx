@@ -1,5 +1,6 @@
 // src/components/CreditCardPage.jsx
 import React, { useEffect, useState } from 'react';
+import Footer from "../Footer";
 import './loans.css'; // Ensure you have the required styles
 
 function CreditCard() {
@@ -16,7 +17,6 @@ function CreditCard() {
     }, []);
 
     const fetchCardTypes = () => {
-        // Sample credit card types array
         return [
             {
                 name: 'Rewards Card',
@@ -42,7 +42,8 @@ function CreditCard() {
     };
 
     return (
-            <div className="container" style={{ marginTop: '100px' }}>
+        <div className="d-flex flex-column min-vh-100">
+            <div className="container flex-grow-1" style={{ marginTop: '100px' }}>
                 {cardData.map((card, index) => (
                     <div className="row mb-4" key={index}>
                         {index % 2 === 0 ? (
@@ -69,6 +70,8 @@ function CreditCard() {
                     </div>
                 ))}
             </div>
+            <Footer /> {/* Include the Footer component */}
+        </div>
     );
 }
 
