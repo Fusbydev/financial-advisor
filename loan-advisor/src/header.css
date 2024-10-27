@@ -9,7 +9,7 @@
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
     margin-left: 5px;
 }
-button span {
+.sign-up span, .login span, .mentor-button span {
     display: inline-block;
     transform: skew(20deg);       /* Unskew the text inside the button */
     font-family: 'oswald';
@@ -18,7 +18,18 @@ button span {
 .sign-up {
     background-color: hsl(0, 100%, 56%);
     color: #f3f3f3;
+    
 }
+.log-out {
+    background-color: white;
+    border: solid 1px red;
+    color: red;
+    height: 40px;
+    width: auto;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
 .login {
     background-color: white;
     border: solid 1px hsl(0, 100%, 56%);

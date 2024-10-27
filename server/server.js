@@ -63,28 +63,19 @@ app.post('/api/register', async (req, res) => {
 app.post('/api/login', (req, res) => {
     const { email, password } = req.body;
 
-    // SQL query to find user by email
     const sql = `SELECT * FROM user WHERE email = ?`;
     db.query(sql, [email], async (err, results) => {
-        if (err) {
-            return res.status(500).json({ message: 'Database error', error: err });
-        }
-        if (results.length === 0) {
-            return res.status(401).json({ message: 'Invalid email or password' });
-        }
+        if (err) return res.status(500).json({ message: 'Database error', error: err });
+        if (results.length === 0) return res.status(401).json({ message: 'Invalid email or password' });
 
         const user = results[0];
-        
-        // Compare the password with the hashed password
         const match = await bcrypt.compare(password, user.password);
-        if (!match) {
-            return res.status(401).json({ message: 'Invalid email or password' });
-        }
+        if (!match) return res.status(401).json({ message: 'Invalid email or password' });
 
-        // Successful login
-        res.status(200).json({ message: 'Login successful', user });
+        res.status(200).json({ message: 'Login successful', user: { id: user.id, full_name: user.full_name } });
     });
 });
+
 
 app.listen(5000, () => {
     console.log('Server running on port 5000');

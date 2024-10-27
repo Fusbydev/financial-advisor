@@ -30,6 +30,11 @@ function LoginComponent() {
                     email: formData.email,
                     password: formData.password,
                 });
+
+                const user = response.data.user;
+                // Save user data to localStorage for later access
+                localStorage.setItem('user', JSON.stringify(user));
+                
                 navigate('/');
             } else {
                 // Send registration data to server
